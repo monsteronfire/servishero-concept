@@ -1,15 +1,33 @@
 module.exports = function(grunt) {
+  // var rewrite = require('connect-modrewrite');
+
   grunt.initConfig({
     app: 'app',
     distFolder: 'dist',
     pkg: grunt.file.readJSON('package.json'),
+
+    clean: {
+      dist: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= distFolder %>/{,*/}*',
+            '!<%= distFolder %>/.git{,*/}*'
+          ]
+        }]
+      }
+    },
+
     concat: {
       options: {
         separator: ';'
       },
       dist: {
-        src: ['<%= app %>/scripts/*.js'],
-        dest: '<%= distFolder %>/scripts/app.js'
+        files: [
+          { src: ['<%= app %>/scripts/*.js'], dest: '<%= distFolder %>/scripts/app.js' },
+          { src: 'bower_components/**/dist/*.min.js', dest: '<%= distFolder %>/scripts/plugins.js' }
+        ]
       }
     },
 
@@ -46,19 +64,6 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: {
-      dist: {
-        files: [{
-          dot: true,
-          src: [
-            '.tmp',
-            '<%= distFolder %>/{,*/}*',
-            '!<%= distFolder %>/.git{,*/}*'
-          ]
-        }]
-      }
-    },
-
     copy: {
       dist: {
         files: [
@@ -78,7 +83,7 @@ module.exports = function(grunt) {
       },
 
       sass: {
-        files: '<%= app %>/stylesheets/**/*.scss',
+        files: '<%= app %>/stylesheets/**/**/*.scss',
         tasks: ['sass']
       },
 
@@ -91,17 +96,39 @@ module.exports = function(grunt) {
         files: '<%= app %>/*.html',
         tasks: ['copy']
       }
-    }
+    },
+
+    // connect: {
+    //   server: {
+    //   keepalive: true,
+    //   hostname: 'localhost',
+    //   middleware: function(connect, options, middlewares) {
+    //       // the rules that shape our mod-rewrite behavior
+    //       var rules = [
+    //       '!\\.html|\\.js|\\.css|\\.svg|\\.jp(e?)g|\\.png|\\.gif$ /index.html'
+    //       ];
+
+    //       // add rewrite as first item in the chain of middlewares
+    //       middlewares.unshift(rewrite(rules));
+
+    //       return middlewares;
+    //     }
+    //   }
+    // }
   }); // The end of grunt.initConfig
 
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['clean', 'concat', 'sass', 'imagemin', 'cssmin', 'copy', 'watch']);
+  // FYI, the order of these tasks is pretty important.
+  // Don't put the 'clean' task at the end, like a n00b.
+  // Yes, I did it once. Hence the comments.
+  grunt.registerTask('default', ['clean', 'concat', 'sass', 'imagemin', 'cssmin', 'copy', 'watch', 'connect']);
 };
