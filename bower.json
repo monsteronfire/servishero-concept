@@ -1,0 +1,14 @@
+{
+  "name": "servishero-concept",
+  "authors": [
+    "monsteronfire <monsteronfire@gmail.com>"
+  ],
+  "description": "A frontend experiment for ServisHero",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
