@@ -20,7 +20,9 @@ npm install
 Run `grunt` to build sass and compile js.
 
 ## Just In Case
-When running `grunt`, you may encounter `Fatal error: Cannot read property 'contents' of undefined`. this is easily fixed by running:
+* Building node in a custom directory helps you avoid having to execute commands with `sudo`. I've put instuctions/steps/etc. for that shizz in [this gist, yo](https://gist.github.com/monsteronfire/adcfd633aa78cfb72c60).
+
+* When running `grunt`, you may encounter `Fatal error: Cannot read property 'contents' of undefined`. This is easily fixed by running:
 ```zsh
 sudo npm cache clean && npm install grunt-contrib-imagemin
 ```

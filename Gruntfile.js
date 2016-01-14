@@ -57,15 +57,28 @@ module.exports = function(grunt) {
           dest: '<%= distFolder %>/images/'
         }]
       }
+    },
+
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: '<%= distFolder %>/stylesheets',
+          src: ['*.css', '!*.min.css'],
+          dest: '<%= distFolder %>/stylesheets',
+          ext: '.min.css'
+        }]
+      }
     }
   }); // The end of grunt.initConfig
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['copy', 'concat', 'imagemin', 'watch']);
+  grunt.registerTask('default', ['copy', 'concat', 'imagemin', 'cssmin', 'watch']);
 };
