@@ -33,11 +33,37 @@ module.exports = function(grunt) {
 
     sass: {
       dist: {
-        files: {
-          '<%= distFolder %>/stylesheets/app.css': '<%= app %>/stylesheets/app.scss'
-        }
+        files: [{
+          expand: true,
+          cwd: '<%= app %>/stylesheets/',
+          src: ['*.scss'],
+          dest: '<%= distFolder %>/stylesheets',
+          ext: '.css'
+        }]
       }
     },
+
+    // sass: {
+    //   dev: {
+    //     options: {
+    //       style: 'expanded',
+    //       banner: '<%= tag.banner %>',
+    //       compass: true
+    //     },
+    //     files: {
+    //       '<%= app %>/stylesheets/ass.css': '<%= distFolder %>/stylesheets/'
+    //     }
+    //   },
+    //   dist: {
+    //     options: {
+    //       style: 'compressed',
+    //       compass: true
+    //     },
+    //     files: {
+    //       '<%= project.assets %>/css/style.css': '<%= project.css %>'
+    //     }
+    //   }
+    // },
 
     // If you encounter 'Fatal error: Cannot read property 'contents' of undefined'
     // Run: 'sudo npm cache clean && npm install grunt-contrib-imagemin' 
@@ -83,8 +109,8 @@ module.exports = function(grunt) {
       },
 
       sass: {
-        files: '<%= app %>/stylesheets/**/**/*.scss',
-        tasks: ['sass']
+        files: '<%= app %>/stylesheets/{,*/}*.{scss,sass}',
+        tasks: ['sass', 'cssmin']
       },
 
       images: {
@@ -130,5 +156,5 @@ module.exports = function(grunt) {
   // FYI, the order of these tasks is pretty important.
   // Don't put the 'clean' task at the end, like a n00b.
   // Yes, I did it once. Hence the comments.
-  grunt.registerTask('default', ['clean', 'concat', 'sass', 'imagemin', 'cssmin', 'copy', 'watch', 'connect']);
+  grunt.registerTask('default', ['clean', 'concat', 'sass', 'imagemin', 'cssmin', 'copy', 'watch']);
 };

@@ -370,6 +370,11 @@ body {
   height: 100%;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
+/** Colours **/
+/*Greys*/
+/** Mixins Below **/
+/* Border Radius */
+/*Single side border-radius*/
 .hero {
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(-280deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
@@ -413,6 +418,16 @@ body {
           .hero .hero-inner .hero-copy p {
             font-size: 1.1em;
             max-width: 40%; } }
+
+.button {
+  /**/ }
+
+.button--rounded {
+  border: 2px solid #FFFFFF;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
 
 h1 {
   color: red; }
