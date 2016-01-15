@@ -4,5 +4,8 @@
 
 .button--rounded {
   border: 2px solid $white;
-  @include border-radius(5px);
+  @include border-radius(20px);
+  padding: 5px 10px;
+  color: $white;
+  text-decoration: none;
 }

@@ -372,9 +372,11 @@ body {
 
 /** Colours **/
 /*Greys*/
-/** Mixins Below **/
+/** Mixins Start Below **/
+/* Font Converter */
 /* Border Radius */
 /*Single side border-radius*/
+/** Absolute Position **/
 .hero {
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(-280deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
@@ -419,15 +421,70 @@ body {
             font-size: 1.1em;
             max-width: 40%; } }
 
+/* One level of nesting -- don't overdo it! */
+.navigation--main {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0px;
+  right: auto;
+  bottom: auto;
+  left: 0px;
+  position: absolute;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: center; }
+  .navigation--main::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.logo--main {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .logo--main:last-child {
+    margin-right: 0; }
+  .logo--main img {
+    width: 80%; }
+
+.navigation--main nav {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .navigation--main nav:last-child {
+    margin-right: 0; }
+  .navigation--main nav ul {
+    padding-left: 0px; }
+  .navigation--main nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 5px;
+    margin-left: 5px; }
+
+.dropdown--country-select {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .dropdown--country-select:last-child {
+    margin-right: 0; }
+
 .button {
   /**/ }
 
 .button--rounded {
   border: 2px solid #FFFFFF;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
   background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */ }
+  /* stops bg color from leaking outside the border: */
+  padding: 5px 10px;
+  color: #FFFFFF;
+  text-decoration: none; }
 
 h1 {
   color: red; }
