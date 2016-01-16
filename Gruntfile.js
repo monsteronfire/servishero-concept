@@ -43,28 +43,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // sass: {
-    //   dev: {
-    //     options: {
-    //       style: 'expanded',
-    //       banner: '<%= tag.banner %>',
-    //       compass: true
-    //     },
-    //     files: {
-    //       '<%= app %>/stylesheets/ass.css': '<%= distFolder %>/stylesheets/'
-    //     }
-    //   },
-    //   dist: {
-    //     options: {
-    //       style: 'compressed',
-    //       compass: true
-    //     },
-    //     files: {
-    //       '<%= project.assets %>/css/style.css': '<%= project.css %>'
-    //     }
-    //   }
-    // },
-
     // If you encounter 'Fatal error: Cannot read property 'contents' of undefined'
     // Run: 'sudo npm cache clean && npm install grunt-contrib-imagemin' 
     imagemin: {
@@ -114,7 +92,7 @@ module.exports = function(grunt) {
       },
 
       images: {
-        files: '<%= app %>/images',
+        files: '<%= app %>/images/*.{png,jpg,gif}',
         tasks: ['imagemin']
       },
 

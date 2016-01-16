@@ -3,9 +3,9 @@
 }
 
 .button--rounded {
-  border: 2px solid $white;
+  border: em(2) solid $white;
   @include border-radius(20px);
-  padding: 5px 10px;
+  padding: em(5) 10px;
   color: $white;
   text-decoration: none;
 }

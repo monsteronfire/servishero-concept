@@ -1,7 +1,23 @@
 
 
 if (window.jQuery) {  
-    console.log('hello');
+  console.log('hello');
 } else {
-    console.log('goodbye');
+  console.log('goodbye');
 }
+
+$(document).ready(function() {
+
+  $(".dropdown-button").click(function() {
+    var $button, $menu;
+    $button = $(this);
+    $menu = $button.siblings(".dropdown-menu");
+    $menu.toggleClass("show-menu");
+    
+    $menu.children("li").click(function() {
+      $menu.removeClass("show-menu");
+      $button.html($(this).html());
+    });
+  });
+
+});
