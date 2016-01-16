@@ -1,5 +1,8 @@
 /** Google Fonts **/
 @import url('https://fonts.googleapis.com/css?family=Signika:400,300,600,700');
+@import url('https://fonts.googleapis.com/css?family=Sansita+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,600,600italic,700,700italic');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 html {
   min-height: 100%;
@@ -12,16 +15,28 @@ body {
 
 /** Colours **/
 $white: #FFFFFF;
+$black: lighten(#000000, 15%);
+$pureblack: #000000;
 $supernova: #FFCC00;
 $dodger-blue: #4E74FF;
+$ship-cove: #7F99BE;
+$indigo: #477DCA;
+$everglade: #20392B;
+$san-juan: #324766;
 /*Greys*/
 $tundora: #4A4A4A;
+
 
 /** Mixins Start Below **/
 
 /* Font Converter */
-@mixin font-size($size: 12, $base: 16) {
-  font-size: $size;
+/*@mixin font-size($size: 12, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}*/
+
+@mixin font-size($size, $base: 16 ){
+  font-size: $size + px; //fallback for old browsers
   font-size: ($size / $base) * 1rem;
 }
 
@@ -70,3 +85,4 @@ $tundora: #4A4A4A;
   left: $left;
   position: absolute;
 }
+

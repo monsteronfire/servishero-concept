@@ -1,0 +1,76 @@
+
+.search {
+  border: em(8) solid rgba(250, 250, 250, 0.2);
+  @include border-radius(em(12));
+}
+
+form.search-bar {
+  $medium-screen: em(767) !default;
+  $large-screen: em(768) !default;
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-spacing: 1.5em !default;
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $search-bar-border-color: $base-border-color;
+  $search-bar-border: 1px solid $search-bar-border-color;
+  $search-bar-background: lighten($search-bar-border-color, 10%);
+
+  position: relative;
+
+  .fa-search {
+    @include abs-pos(em(10), auto, auto, em(12));
+    z-index: 2;
+  }
+
+  p {
+    @include abs-pos(em(5), em(12), auto, auto);
+    margin: em(0);
+    color: lighten($pureblack, 60%);
+    @include font-size(13);
+
+    span {
+      color: $black;
+    }
+  }
+
+  input[type=search] {
+    @include appearance(none);
+    @include transition(border-color);
+    background-color: white;
+    border: 1px solid $base-border-color;
+    box-sizing: border-box;
+    display: block;
+    @include font-size(13);
+    margin: 0;
+    padding: ($base-spacing / 3) em(150) ($base-spacing / 3) em(50);
+    position: relative;
+    width: 100%;
+    @include border-top-radius(em(5));
+  }
+
+  button[type=submit] {
+    width: 100%;
+    position: relative;
+    outline: none;
+    padding: 5px 10px;
+    background-color: $dodger-blue;
+    border: none;
+    @include border-bottom-radius(em(5));
+    color: $white;
+    font-family: 'Open Sans', sans-serif;
+
+    @include media($medium-screen) {
+      @include position(absolute, 0em 0em 0em null);
+      width: auto;
+    }
+
+    @include media($large-screen) {
+      &:hover {
+        background-color: darken($dodger-blue, 3%);
+        @include transition(all 0.7s  ease-in-out);
+      }
+    }
+  }
+}

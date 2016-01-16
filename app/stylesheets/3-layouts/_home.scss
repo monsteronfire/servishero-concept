@@ -1,0 +1,75 @@
+section {
+  $large-screen: em(768) !default;
+  padding-top: em(16);
+  padding-right: em(10);
+  padding-bottom: em(16);
+  padding-left: em(10);
+
+  @include media($large-screen) {
+    
+  }
+}
+
+.section__inner {
+  @include outer-container;
+}
+
+.section--features {
+  background-color: $white;
+}
+
+.section--testimonials,
+.section-highlights {
+  background-color: lighten($pureblack, 95%);
+}
+
+.highlights__list,
+.testimonials__list {
+  @include clearfix;
+  margin: 0;
+  padding: 0;
+}
+
+.content-box {
+  $large-screen: em(1024) !default;
+  background-color: $white;
+  @include border-radius(em(7));
+  -webkit-box-shadow: em(0) em(5) em(0) em(0) rgba(0,0,0,0.1);
+     -moz-box-shadow: em(0) em(5) em(0) em(0) rgba(0,0,0,0.1);
+          box-shadow: em(0) em(5) em(0) em(0) rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: em(20);
+
+  .image-mask {
+    overflow: hidden;
+  }
+
+  .image-mask img {
+    width: 100%;
+  }
+
+  .content-box__content {
+    padding-right: em(20);
+    padding-left: em(20);
+  }
+
+  .highlights__service-list {
+    @include font-size(13);
+    padding: em(0) em(0) em(0) em(20);
+  }
+
+  .highlights__service-list li {
+    color: lighten($pureblack, 55%)
+  }
+
+  @include media($large-screen) {
+    @include span-columns(4);
+    margin-right: 1.5%;
+  }
+}
+
+/** Testimonial Section Styles **/
+.testimonials__list {
+  margin: 0;
+  padding: 0;
+}

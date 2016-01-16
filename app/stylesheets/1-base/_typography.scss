@@ -1,5 +1,69 @@
 h1 {
   color: $white;
   font-family: 'Signika', sans-serif;
-  text-shadow: em(1) em(1) em(1) rgba(150, 150, 150, 0.6);
+  text-shadow: em(1) em(1) em(1) rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: $supernova;
+  font-family: 'Sansita One', cursive;
+  text-shadow: em(1) em(1) em(1) rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  color: lighten($pureblack, 30%);
+  font-family: 'Signika', sans-serif;
+  @include font-size(24);
+  text-align: center;
+
+  &:after {
+    content: '';
+    display: block;
+    width: em(20);
+    margin: em(10) auto 0 auto;
+    border-bottom: em(1) solid lighten($pureblack, 70%);
+  }
+}
+
+h5 {
+  color: lighten($pureblack, 35%);
+  font-family: 'Signika', sans-serif;
+  @include font-size(20);
+  -webkit-margin-before: em(15);
+    -webkit-margin-after: em(5);
+    -webkit-margin-start: em(0);
+    -webkit-margin-end: em(0);
+}
+
+p, a, ul li, li {
+  font-family: 'Open Sans', sans-serif;
+  @include font-size(13);
+}
+
+a {
+  color: $dodger-blue;
+}
+
+ul li {
+  list-style: disc;
+}
+
+/** Hero Typography **/
+.hero__categories {
+  ul li {
+    text-align: center;
+  }
+
+  ul li .fa {
+    @include font-size(25);
+  }
+
+  ul li p {
+    @include font-size(10);
+  }
+
+  ul li .fa,
+  ul li p {
+    color: $black;
+  }
 }

@@ -1,11 +1,58 @@
+.button-holder {
+  position: relative;
+  @include clearfix;
+  padding-right: em(20);
+  padding-left: em(20);
+
+  hr {
+    position: absolute;
+    top: em(10);
+    right: em(0);
+    left: em(0);
+    z-index: 1;
+    width: 100%;
+    border: 1px solid lighten($pureblack, 90%);
+  }
+}
+
 .button {
   /**/
 }
 
 .button--rounded {
+  $large-screen: em(768) !default;
   border: em(2) solid $white;
   @include border-radius(20px);
-  padding: em(5) 10px;
+  padding: em(5) em(20);
   color: $white;
+  @include font-size(13);
   text-decoration: none;
+
+  @include media($large-screen) {
+    &:hover {
+      background-color: $supernova;
+      border-color: $black;
+      @include transition(all 0.7s  ease-in-out);
+      color: $black;
+    }
+  }
+}
+
+.button--more {
+  position: relative;
+  z-index: 2;
+  display: block;
+  float: right;
+  width: em(40);
+  height: em(40);
+  border-radius: em(40);
+  background-color: $dodger-blue;
+  color: $white;
+  line-height: em(35);
+  text-align: center;
+}
+
+.link--free-quote {
+  display: block;
+  padding: em(0) em(20) em(25) em(20);
 }

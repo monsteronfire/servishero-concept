@@ -11,7 +11,7 @@
   <!-- Top Navigation -->
   <header class="navigation--main" role="banner">
     <a href="javascript:void(0);" class="logo--main">
-      <img src="images/logo--full.png" alt="">
+      <img src="images/logo--full--white.png" alt="">
     </a>
     <nav role="navigation">
       <ul>
@@ -23,6 +23,7 @@
       <div class="dropdown-container">
         <p class="dropdown-button"><img src="images/flag--malaysia.jpg" alt="Malaysian Flag Icon"></p>
         <ul class="dropdown-menu dropdown-select">
+          <li><img src="images/flag--malaysia.jpg" alt="Malaysian Flag Icon"></li>
           <li><img src="images/flag--singapore.jpg" alt="Singaporean Flag Icon"></li>
         </ul>
       </div>
@@ -30,50 +31,59 @@
   </header>
 
   <!-- Hero Unit -->
-  <section class="header--hero hero">
+  <div class="header--hero hero">
     <div class="hero__inner">
-        <div class="hero__copy">
-          <h1>The fast and easy way to hire trusted local service professionals.</h1>
-          <p>Get free quotes. Pick your hero. Job done!</p>  
-        </div>
-        <div class="hero__categories">
-          <ul>
-            <li>
-              <i class="fa fa-home"></i>
-              <p class="hero__categories-label">House</p>
-            </li>
-            <li>
-              <i class="fa fa-camera"></i>
-              <p class="hero__categories-label">Events</p>
-            </li>
-            <li>
-              <i class="fa fa-home"></i>
-              <p class="hero__categories-label">Learning</p>
-            </li>
-            <li>
-              <i class="fa fa-heart"></i>
-              <p class="hero__categories-label">Health</p>
-            </li>
-            <li>
-              <i class="fa fa-home"></i>
-              <p class="hero__categories-label">Commercial</p>
-            </li>
-          </ul>
-        </div>
+      <div class="hero__copy">
+        <h1>The fast and easy way to hire trusted local service professionals.</h1>
+        <h2>Get free quotes. Pick your hero. Job done!</h2>  
+      </div>
+      <div class="search">
+        <form class="search-bar" role="search">
+          <i class="fa fa-search"></i>
+          <input type="search" placeholder="I need help with..." />
+          <p>in <span>Kuala Lumpur</span></p>
+          <button type="submit">Get Started</button>
+        </form>
+      </div>
     </div>
-  </section>
+    <div class="hero__categories">
+        <ul>
+          <li>
+            <i class="fa fa-home"></i>
+            <p>House</p>
+          </li>
+          <li>
+            <i class="fa fa-camera"></i>
+            <p>Events</p>
+          </li>
+          <li>
+            <i class="fa fa-home"></i>
+            <p>Learning</p>
+          </li>
+          <li>
+            <i class="fa fa-heart"></i>
+            <p>Health</p>
+          </li>
+          <li>
+            <i class="fa fa-home"></i>
+            <p>Commercial</p>
+          </li>
+        </ul>
+      </div>
+    <div class="hero__underlay"></div>
+  </div>
   
   <!-- Section: Features -->
   <section class="section--features features">
     <div class="section__inner">
-      <h2>We introduce you to trusted local service people who can get your job done</h2>
+      <h3>We introduce you to trusted local service people who can get your job done</h3>
       <p class="section__subline">How does ServisHero work?</p>
       <ul class="features__list">
         <li class="features__item--question">
           <div class="features__item-image">            
           </div>
           <div class="features__item-description">
-            <h3>Tell us what you need done</h3>
+            <h4>Tell us what you need done</h4>
             <p>Answer a few simple questions about your job.</p>
           </div>
         </li>
@@ -81,7 +91,7 @@
           <div class="features__item-image">            
           </div>
           <div class="features__item-description">
-            <h3>Get multiple quotes</h3>
+            <h4>Get multiple quotes</h4>
             <p>Local Heroes send you detailed quotes fast.</p>
           </div>
         </li>
@@ -89,7 +99,7 @@
           <div class="features__item-image">            
           </div>
           <div class="features__item-description">
-            <h3>Pick your Hero</h3>
+            <h4>Pick your Hero</h4>
             <p>Compare quotes, reviews and profiles.</p>
           </div>
         </li>
@@ -100,7 +110,7 @@
   <!-- Section: Testimonials -->
   <section class="section--testimonials testimonials">
     <div class="section__inner">
-      <h2>Every day hundreds of Malaysians get things done with ServisHero</h2>
+      <h3>Every day hundreds of Malaysians get things done with ServisHero</h3>
       <ul class="testimonials__list">
         <li class="content-box">
           <div class="testimonials__image-band">
@@ -202,7 +212,7 @@
   <!-- Section: Highlights -->
   <section class="section-highlights highlights">
     <div class="section__inner">
-      <h2>1000+ Heroes are ready to provide you with free quotes</h2>
+      <h3>1000+ Heroes are ready to provide you with free quotes</h3>
       <div class="button-holder">
         <a href="javascript:void(0);" class="button button-browse">Browse All <i class="fa fa-arrow-right"></i></a>
       </div>
@@ -211,114 +221,126 @@
           <div class="image-mask image-mask--rectangle">
             <img src="images/highlights--aircon.jpg" alt="Woman sitting on a couch, comfortable in her airconditioned home.">
           </div>
-          <h4>Air Conditioning</h4>
-          <ul class="highlights__service-list">
-            <li>Repair or service of home airconditioning</li>
-            <li>Internal or external units</li>
-            <li>Air filtration</li>
-          </ul>
+          <div class="content-box__content">
+            <h5>Air Conditioning</h5>
+            <ul class="highlights__service-list">
+              <li>Repair or service of home airconditioning</li>
+              <li>Internal or external units</li>
+              <li>Air filtration</li>
+            </ul>
+          </div>
           <div class="button-holder">
             <a href="javascript:void(0);" class="button button--more">
               <i class="fa fa-arrow-right"></i>
             </a>
             <hr>
           </div>
-          <a href="javascript:void(0);">Get a free quote for airconditioning</a>
+          <a href="javascript:void(0);" class="link--free-quote">Get a free quote for airconditioning</a>
         </li>
 
         <li class="content-box">
           <div class="image-mask image-mask--rectangle">
             <img src="images/highlights--electrician.jpg" alt="Hipster lightbulbs hanging in a row.">
           </div>
-          <h4>Electrician</h4>
-          <ul class="highlights__service-list">
-            <li>Pay per hour</li>
-            <li>Standard home electrical jobs</li>
-            <li>Installation or repair</li>
-          </ul>
+          <div class="content-box__content">
+            <h5>Electrician</h5>
+            <ul class="highlights__service-list">
+              <li>Pay per hour</li>
+              <li>Standard home electrical jobs</li>
+              <li>Installation or repair</li>
+            </ul>
+          </div>
           <div class="button-holder">
             <a href="javascript:void(0);" class="button button--more">
               <i class="fa fa-arrow-right"></i>
             </a>
             <hr>
           </div>
-          <a href="javascript:void(0);">Get a free quote for electricians</a>
+          <a href="javascript:void(0);" class="link--free-quote">Get a free quote for electricians</a>
         </li>
 
         <li class="content-box">
           <div class="image-mask image-mask--rectangle">
             <img src="images/highlights--plumber.jpg" alt="A plumber's tools are left by the sink.">
           </div>
-          <h4>Plumber</h4>
-          <ul class="highlights__service-list">
-            <li>Repair and install home plumbing</li>
-            <li>Internal or external</li>
-            <li>Pay per hour or per job</li>
-          </ul>
+          <div class="content-box__content">
+            <h5>Plumber</h5>
+            <ul class="highlights__service-list">
+              <li>Repair and install home plumbing</li>
+              <li>Internal or external</li>
+              <li>Pay per hour or per job</li>
+            </ul>
+          </div>
           <div class="button-holder">
             <a href="javascript:void(0);" class="button button--more">
               <i class="fa fa-arrow-right"></i>
             </a>
             <hr>
           </div>
-          <a href="javascript:void(0);">Get a free quote for plumbers</a>
+          <a href="javascript:void(0);" class="link--free-quote">Get a free quote for plumbers</a>
         </li>
 
         <li class="content-box">
           <div class="image-mask image-mask--rectangle">
             <img src="images/highlights--handyman.jpg" alt="A handyman is working with timber. He actually looks more like a carpenter. Like Joseph was.">
           </div>
-          <h4>Handyman</h4>
-          <ul class="highlights__service-list">
-            <li>Pay per hour</li>
-            <li>Unskilled jobs around the house</li>
-            <li>General gardening</li>
-          </ul>
+          <div class="content-box__content">
+            <h5>Handyman</h5>
+            <ul class="highlights__service-list">
+              <li>Pay per hour</li>
+              <li>Unskilled jobs around the house</li>
+              <li>General gardening</li>
+            </ul>
+          </div>
           <div class="button-holder">
             <a href="javascript:void(0);" class="button button--more">
               <i class="fa fa-arrow-right"></i>
             </a>
             <hr>
           </div>
-          <a href="javascript:void(0);">Get a free quote for handymen</a>
+          <a href="javascript:void(0);" class="link--free-quote">Get a free quote for handymen</a>
         </li>
 
         <li class="content-box">
           <div class="image-mask image-mask--rectangle">
             <img src="images/highlights--pest-control.jpg" alt="An exterminator doing what a Dalek does best -- exterminate, exterminate.">
           </div>
-          <h4>Pest Control</h4>
-          <ul class="highlights__service-list">
-            <li>Finds pests in your home</li>
-            <li>Lay traps</li>
-            <li>Set bait</li>
-          </ul>
+          <div class="content-box__content">
+            <h5>Pest Control</h5>
+            <ul class="highlights__service-list">
+              <li>Finds pests in your home</li>
+              <li>Lay traps</li>
+              <li>Set bait</li>
+            </ul>
+          </div>
           <div class="button-holder">
             <a href="javascript:void(0);" class="button button--more">
               <i class="fa fa-arrow-right"></i>
             </a>
             <hr>
           </div>
-          <a href="javascript:void(0);">Get a free quote for pest control</a>
+          <a href="javascript:void(0);" class="link--free-quote">Get a free quote for pest control</a>
         </li>
 
         <li class="content-box">
           <div class="image-mask image-mask--rectangle">
             <img src="images/highlights--water-heater-repair.jpg" alt="A human hand turning the dial on a water heater. He better know what he's doing!.">
           </div>
-          <h4>Water Heater Repair</h4>
-          <ul class="highlights__service-list">
-            <li>Pay per hour or per job</li>
-            <li>Repair, service and installation</li>
-            <li>Certify water heaters</li>
-          </ul>
+          <div class="content-box__content">
+            <h5>Water Heater Repair</h5>
+            <ul class="highlights__service-list">
+              <li>Pay per hour or per job</li>
+              <li>Repair, service and installation</li>
+              <li>Certify water heaters</li>
+            </ul>
+          </div>
           <div class="button-holder">
             <a href="javascript:void(0);" class="button button--more">
               <i class="fa fa-arrow-right"></i>
             </a>
             <hr>
           </div>
-          <a href="javascript:void(0);">Get a free quote for water heaters</a>
+          <a href="javascript:void(0);" class="link--free-quote">Get a free quote for water heaters</a>
         </li>
       </ul>
     </div>

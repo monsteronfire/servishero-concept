@@ -2,10 +2,11 @@
 
 .navigation--main {
   @include outer-container;
-  @include abs-pos(0px, auto, auto, 0px);
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+  @include abs-pos(em(0), auto, auto, em(0));
+  z-index: 2;
+  padding-top: em(20);
+  padding-right: em(10);
+  padding-left: em(10);
   text-align: center;
 }
 
@@ -21,14 +22,14 @@
   @include span-columns(12);
 
   ul {
-    padding-left: 0px;
+    padding-left: em(0);
   }
 
   ul li {
     display: inline-block;
     list-style: none;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: em(5);
+    margin-left: em(5);
   }
 }
 
