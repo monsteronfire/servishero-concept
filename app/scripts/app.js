@@ -20,4 +20,23 @@ $(document).ready(function() {
     });
   });
 
+
+  // backToTop button
+  var btnToTop = $('#btnToTop'),
+  offset=250,
+  scrollDuration=300;
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > offset) {
+      btnToTop.fadeIn(500);
+    } else {
+      btnToTop.fadeOut(500);
+    }
+  });
+
+  btnToTop.click(function(event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0}, scrollDuration);
+  });
 });

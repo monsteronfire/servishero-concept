@@ -1,0 +1,39 @@
+.navigation--footer {
+  padding-bottom: em(40);
+  @include outer-container;
+
+  nav ul {
+    text-align: center;
+    padding: em(0);
+  }
+
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: em(15);
+    margin-right: em(15);
+  }
+
+  nav ul li a {
+    color: $supernova;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.icon-holder--social-media {
+  padding: em(0);
+  text-align: center;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: em(15);
+    margin-right: em(15);
+  }
+
+  li .fa {
+    color: $supernova;
+    @include font-size(20);
+  }
+}
