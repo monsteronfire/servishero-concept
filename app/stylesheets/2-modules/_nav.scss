@@ -1,6 +1,8 @@
 /* One level of nesting -- don't overdo it! */
 
+
 .navigation--main {
+  $medium-screen: em(768) !default;
   @include outer-container;
   @include abs-pos(em(0), auto, auto, em(0));
   z-index: 2;
@@ -8,17 +10,34 @@
   padding-right: em(10);
   padding-left: em(10);
   text-align: center;
+  width: 100%;
+
+  @include media($medium-screen) {
+
+  }
 }
 
 .logo--main {
+  $medium-screen: em(768) !default;
+  $large-screen: em(1024) !default;
   @include span-columns(12);
 
   img {
-    width: 80%;
+    width: em(270);
+  }
+
+  @include media($medium-screen) {
+    @include span-columns(5);
+    text-align: left;
+  }
+
+  @include media($large-screen) {
+    @include span-columns(5);
   }
 }
 
 .navigation--main nav {
+  $medium-screen: em(768) !default;
   @include span-columns(12);
 
   ul {
@@ -31,8 +50,12 @@
     margin-right: em(5);
     margin-left: em(5);
   }
-}
 
-.dropdown--country-select {
-  @include span-columns(3);
+  @include media($medium-screen) {
+    @include span-columns(5);
+
+    ul {
+      text-align: right;
+    }
+  }
 }

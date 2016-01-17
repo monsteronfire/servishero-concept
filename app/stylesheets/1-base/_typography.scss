@@ -1,7 +1,14 @@
+$medium-screen: em(768) !default;
+
 h1 {
   color: $white;
   font-family: 'Signika', sans-serif;
   text-shadow: em(1) em(1) em(1) rgba(0, 0, 0, 0.5);
+
+  @include media($medium-screen) {
+    width: em(250);
+    margin: 0 auto;
+  }
 }
 
 h2 {
@@ -22,6 +29,11 @@ h3 {
     width: em(60);
     margin: em(10) auto 0 auto;
     border-bottom: em(1) solid lighten($pureblack, 70%);
+  }
+
+  @include media($medium-screen) {
+    width: em(300);
+    margin: 0 auto;
   }
 }
 

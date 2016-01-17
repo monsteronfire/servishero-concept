@@ -23,15 +23,29 @@ section {
   background-color: lighten($pureblack, 95%);
 }
 
+.section--features,
+.section--testimonials,
+.section-highlights {
+  padding-top: em(60);
+}
+
 .highlights__list,
 .testimonials__list {
   @include clearfix;
+  text-align: center;
   margin: 0;
   padding: 0;
+  padding-top: em(30);
+}
+
+.highlights__list {
+  margin-bottom: em(40);
 }
 
 .content-box {
+  $medium-screen: em(700) !default;
   $large-screen: em(1024) !default;
+
   background-color: $white;
   @include border-radius(em(7));
   -webkit-box-shadow: em(0) em(5) em(0) em(0) rgba(0,0,0,0.1);
@@ -39,6 +53,8 @@ section {
           box-shadow: em(0) em(5) em(0) em(0) rgba(0,0,0,0.1);
   overflow: hidden;
   margin-bottom: em(20);
+  display: inline-block;
+  width: 100%;
 
   .image-mask {
     overflow: hidden;
@@ -51,24 +67,55 @@ section {
   .content-box__content {
     padding-right: em(25);
     padding-left: em(25);
+
+    h5 {
+      text-align: left;
+    }
   }
 
   .highlights__service-list {
     @include font-size(13);
     padding: em(0) em(0) em(0) em(20);
+    text-align: left;
   }
 
   .highlights__service-list li {
     color: lighten($pureblack, 55%)
   }
 
+  @include media($medium-screen) {
+    /*@include span-columns(6);*/
+    width: 30%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+
   @include media($large-screen) {
-    @include span-columns(4);
-    margin-right: 1.5%;
+    /*@include span-columns(4);
+    margin-right: 1.5%;*/
+  }
+}
+
+.section-highlights {
+  $medium-screen: em(700) !default;
+  $large-screen: em(1024) !default;
+
+  .content-box {
+
+    @include media($medium-screen) {
+      height: em(450);
+    }
+  }
+
+  .button-holder {
+    text-align: right;
+    margin-bottom: em(20);
   }
 }
 
 .section--testimonials {
+  $medium-screen: em(768) !default;
+  $large-screen: em(1024) !default;
   /*$mobile: new-breakpoint(max-width 480px 4);*/
   .content-box {
     .testimonials__image-band {
@@ -107,6 +154,10 @@ section {
       font-weight: bold;
       text-align: center;
       margin-top: em(30);
+
+      @include media($medium-screen){
+        margin-top: em(20);
+      }
     }
 
     .image-mask--circle {
@@ -116,6 +167,10 @@ section {
       border: em(3) solid rgba(250, 250, 250, 0.8);
       border-radius: em(70);
     }
+
+    @include media($medium-screen) {
+        height: em(420);
+      }
   }
 }
 
@@ -128,11 +183,6 @@ section {
   }
 }
 
-/** Testimonial Section Styles **/
-.testimonials__list {
-  margin: 0;
-  padding: 0;
-}
 
 /** Features List **/
 .features__list {
@@ -140,21 +190,59 @@ section {
   text-align: center;
 
   li {
+    display: inline-block;
     list-style: none;
+    margin-right: em(20);
+    margin-left: em(20);
   }
 }
 
 .features__item-description p {
   margin: em(0);
+  color: lighten($pureblack, 60%);
 }
 
 .features__item-image {
-  width: em(300);
-  height: em(300);
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
-  background-size: cover;
-  background-position: right; 
+  /*background-size: cover;*/
+  background-position: right center; 
 }
+
+/** Animated Sprites **/
+@-webkit-keyframes play {
+     from {
+        background-position: 0px
+    }
+    to {
+        background-position: -1600px
+    }
+}
+/*@-moz-keyframes blinkg {
+    from {
+        background-position: 0px
+    }
+    to {
+        background-position: -1600px
+    }
+}
+@-ms-keyframes blinkg {
+    from {
+        background-position: 0px
+    }
+    to {
+        background-position: -1600px
+    }
+}
+@-o-keyframes blinkg {
+    from {
+        background-position: 0px
+    }
+    to {
+        background-position: -1600px
+    }
+}*/
 
 .features__item--question .features__item-image {
   background-image: url('../images/sprite-animation-icon-1.png');
@@ -166,4 +254,20 @@ section {
 
 .features__item--select .features__item-image {
   background-image: url('../images/sprite-animation-icon-3.png');
+}
+
+.features__item--question .features__item-image:hover,
+.features__item--quote .features__item-image:hover,
+.features__item--select .features__item-image:hover {
+  $large-screen: em(1024) !default;
+
+  @include media($large-screen){
+    @include animation-delay(2s);
+    animation-timing-function: ease-out;
+    -webkit-animation: play 1.5s steps(8) infinite;
+       -moz-animation: play 1.5s steps(8) infinite;
+        -ms-animation: play 1.5s steps(8) infinite;
+         -o-animation: play 1.5s steps(8) infinite;
+            animation: play 1.5s steps(8) infinite;
+  }
 }

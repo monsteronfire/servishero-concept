@@ -58,6 +58,7 @@
 }
 
 .button--back-to-top {
+  $large-screen: em(1024) !default;
   position: fixed;
   bottom: em(120);
   right: em(40);
@@ -68,11 +69,18 @@
   border-radius: em(50);
   line-height: em(50);
   text-align: center;
-  text-shadow: em(1) em(1) em(1) rgba(0, 0, 0, 0.3);
+  /*text-shadow: em(1) em(1) em(1) rgba(0, 0, 0, 0.3);*/
 
   .fa {
     color: $white;
     @include font-size(24);
-    text-shadow: em(1) em(1) em(1) rgba(0, 0, 0, 0.3);
+  }
+
+  @include media($large-screen){
+    &:hover {
+      .fa {
+        text-shadow: em(1) em(1) em(1) rgba(0, 0, 0, 0.3);
+      }
+    }
   }
 }

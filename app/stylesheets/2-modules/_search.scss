@@ -1,7 +1,14 @@
 
 .search {
+  $medium-screen: em(767) !default;
   border: em(8) solid rgba(250, 250, 250, 0.2);
   @include border-radius(em(12));
+  max-width: em(600);
+  margin: 0 auto;
+  
+  @include media($medium-screen) {
+    @include border-radius(em(10));
+  }
 }
 
 form.search-bar {
@@ -22,6 +29,10 @@ form.search-bar {
   .fa-search {
     @include abs-pos(em(10), auto, auto, em(12));
     z-index: 2;
+
+    @include media($medium-screen) {
+      top: em(7);
+    }
   }
 
   p {
@@ -32,6 +43,10 @@ form.search-bar {
 
     span {
       color: $black;
+    }
+
+    @include media($medium-screen) {
+      right: em(140);
     }
   }
 
@@ -48,6 +63,11 @@ form.search-bar {
     position: relative;
     width: 100%;
     @include border-top-radius(em(5));
+
+    @include media($medium-screen) {
+      @include border-bottom-radius(em(5));
+      padding-right: em(280);
+    }
   }
 
   button[type=submit] {
@@ -64,6 +84,9 @@ form.search-bar {
     @include media($medium-screen) {
       @include position(absolute, 0em 0em 0em null);
       width: auto;
+      @include border-bottom-radius(em(0));
+      @include border-right-radius(em(5));
+
     }
 
     @include media($large-screen) {

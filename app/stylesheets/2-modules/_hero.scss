@@ -2,7 +2,10 @@
   position: relative;
   $base-border-radius: em(3) !default;
   $action-color: $indigo !default;
+
   $large-screen: em(860) !default;
+  $medium-screen: em(768) !default;
+
   $hero-background-top: $ship-cove; 
   $hero-background-bottom: $everglade;
   $hero-color: white;
@@ -22,7 +25,7 @@
     position: relative;
     z-index: 1;
     margin: auto;
-    padding: em(120) em(10) em(10) em(10);
+    padding: em(140) em(10) em(60) em(10);
     text-align: center;
 
     .hero-copy {
@@ -39,6 +42,10 @@
         }
       }
     }
+
+    @include media($medium-screen){
+      padding: em(200) em(10) em(100) em(10);
+    }
   }
 }
 
@@ -52,6 +59,9 @@
 }
 
 .hero__categories {
+  $large-screen: em(1024) !default;
+  $medium-screen: em(768) !default;
+
   @include abs-pos(auto, em(0), em(0), em(0));
   z-index: 2;
   padding-top: em(15);
@@ -66,6 +76,26 @@
     list-style: none;
     display: inline-block;
     width: 18%;
+  }
+
+  ul li p {
+    font-style: italic;
+  }
+
+  @include media($medium-screen){
+    padding-top: em(20);
+    padding-bottom: em(20);
+
+    ul li .fa,
+    ul li p {
+      display: inline;
+      vertical-align: middle;
+    }
+
+    ul li p {
+      @include font-size(14);
+      margin-left: em(10);
+    }
   }
 
 }

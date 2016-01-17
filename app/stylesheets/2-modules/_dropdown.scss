@@ -137,7 +137,20 @@
 // Inspired by code by www.HUSAMUI.com
 
 .dropdown--country-select {
+  $medium-screen: em(768) !default;
+  $large-screen: em(1024) !default;
   position: absolute;
   top: em(0);
   right: em(0);
+
+  @include media($medium-screen) {
+    position: relative;
+    margin-top: em(10);
+    text-align: right;
+    @include span-columns(2);
+  }
+  
+  @include media($large-screen) {
+    
+  }
 }
