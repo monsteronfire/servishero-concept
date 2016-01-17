@@ -1124,7 +1124,7 @@ section {
   -moz-box-shadow: 0em 0.3125em 0em 0em rgba(0, 0, 0, 0.1);
   box-shadow: 0em 0.3125em 0em 0em rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.875em;
   display: inline-block;
   width: 100%; }
   .content-box .image-mask {
