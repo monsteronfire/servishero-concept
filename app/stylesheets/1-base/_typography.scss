@@ -19,10 +19,18 @@ h3 {
   &:after {
     content: '';
     display: block;
-    width: em(20);
+    width: em(60);
     margin: em(10) auto 0 auto;
     border-bottom: em(1) solid lighten($pureblack, 70%);
   }
+}
+
+h4 {
+  color: $black;
+  font-family: 'Open Sans', sans-serif;
+  @include font-size(18);
+  -webkit-margin-before: em(10);
+    -webkit-margin-after: em(10);
 }
 
 h5 {
@@ -46,6 +54,12 @@ a {
 
 ul li {
   list-style: disc;
+}
+
+.section__subline {
+  color: lighten($pureblack, 50%);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /** Hero Typography **/

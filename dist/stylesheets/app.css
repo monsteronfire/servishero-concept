@@ -405,9 +405,17 @@ h3 {
   h3:after {
     content: '';
     display: block;
-    width: 1.25em;
+    width: 3.75em;
     margin: 0.625em auto 0 auto;
     border-bottom: 0.0625em solid #b3b3b3; }
+
+h4 {
+  color: #262626;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  -webkit-margin-before: 0.625em;
+  -webkit-margin-after: 0.625em; }
 
 h5 {
   color: #595959;
@@ -429,6 +437,11 @@ a {
 
 ul li {
   list-style: disc; }
+
+.section__subline {
+  color: gray;
+  text-align: center;
+  text-transform: uppercase; }
 
 /** Hero Typography **/
 .hero__categories ul li {
@@ -961,5 +974,31 @@ section {
 .testimonials__list {
   margin: 0;
   padding: 0; }
+
+/** Features List **/
+.features__list {
+  padding: 0em;
+  text-align: center; }
+  .features__list li {
+    list-style: none; }
+
+.features__item-description p {
+  margin: 0em; }
+
+.features__item-image {
+  width: 18.75em;
+  height: 18.75em;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: right; }
+
+.features__item--question .features__item-image {
+  background-image: url("../images/sprite-animation-icon-1.png"); }
+
+.features__item--quote .features__item-image {
+  background-image: url("../images/sprite-animation-icon-2.png"); }
+
+.features__item--select .features__item-image {
+  background-image: url("../images/sprite-animation-icon-3.png"); }
 
 /*# sourceMappingURL=app.css.map */

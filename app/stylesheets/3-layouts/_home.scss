@@ -133,3 +133,37 @@ section {
   margin: 0;
   padding: 0;
 }
+
+/** Features List **/
+.features__list {
+  padding: em(0);
+  text-align: center;
+
+  li {
+    list-style: none;
+  }
+}
+
+.features__item-description p {
+  margin: em(0);
+}
+
+.features__item-image {
+  width: em(300);
+  height: em(300);
+  margin: 0 auto;
+  background-size: cover;
+  background-position: right; 
+}
+
+.features__item--question .features__item-image {
+  background-image: url('../images/sprite-animation-icon-1.png');
+}
+
+.features__item--quote .features__item-image {
+  background-image: url('../images/sprite-animation-icon-2.png');
+}
+
+.features__item--select .features__item-image {
+  background-image: url('../images/sprite-animation-icon-3.png');
+}
