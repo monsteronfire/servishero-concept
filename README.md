@@ -14,6 +14,14 @@ git clone https://github.com/monsteronfire/servishero-concept.git
 cd servishero-concept
 npm install
 ```
+## Helpful Links
+* [Bourbon](https://github.com/thoughtbot/bourbon)
+* [Neat](https://github.com/thoughtbot/neat)
+* [Google Font - Signika](https://www.google.com/fonts/specimen/Signika)
+* [Google Font - Sansita One](https://www.google.com/fonts/specimen/Sansita+One)
+* [Google Font - Open Sans](https://www.google.com/fonts/specimen/Open+Sans)
+* [FontAwesome](https://fortawesome.github.io/Font-Awesome/cheatsheet/)
+
 
 ## Build & development
 
