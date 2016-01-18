@@ -142,6 +142,7 @@ section {
     .testimonial__quote {
       color: lighten($pureblack, 40%);
       font-style: italic;
+      text-align: left;
 
       &:before,
       &:after {

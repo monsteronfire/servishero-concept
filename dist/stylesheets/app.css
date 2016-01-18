@@ -1179,7 +1179,8 @@ section {
       color: #4d4d4d; }
   .section--testimonials .content-box .testimonial__quote {
     color: #666666;
-    font-style: italic; }
+    font-style: italic;
+    text-align: left; }
     .section--testimonials .content-box .testimonial__quote:before, .section--testimonials .content-box .testimonial__quote:after {
       content: ' " '; }
   .section--testimonials .content-box .testimonial__service-provider {
