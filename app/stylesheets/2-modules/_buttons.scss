@@ -15,10 +15,6 @@
   }
 }
 
-.button {
-  /**/
-}
-
 .button--rounded {
   $large-screen: em(768) !default;
   border: em(2) solid $white;
@@ -69,7 +65,6 @@
   border-radius: em(50);
   line-height: em(50);
   text-align: center;
-  /*text-shadow: em(1) em(1) em(1) rgba(0, 0, 0, 0.3);*/
 
   .fa {
     color: $white;

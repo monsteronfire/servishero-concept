@@ -84,15 +84,9 @@ section {
   }
 
   @include media($medium-screen) {
-    /*@include span-columns(6);*/
     width: 30%;
     margin-right: 1%;
     margin-left: 1%;
-  }
-
-  @include media($large-screen) {
-    /*@include span-columns(4);
-    margin-right: 1.5%;*/
   }
 }
 
@@ -116,7 +110,7 @@ section {
 .section--testimonials {
   $medium-screen: em(768) !default;
   $large-screen: em(1024) !default;
-  /*$mobile: new-breakpoint(max-width 480px 4);*/
+  
   .content-box {
     .testimonials__image-band {
       background-color: $supernova;
@@ -220,30 +214,6 @@ section {
         background-position: -1600px
     }
 }
-/*@-moz-keyframes blinkg {
-    from {
-        background-position: 0px
-    }
-    to {
-        background-position: -1600px
-    }
-}
-@-ms-keyframes blinkg {
-    from {
-        background-position: 0px
-    }
-    to {
-        background-position: -1600px
-    }
-}
-@-o-keyframes blinkg {
-    from {
-        background-position: 0px
-    }
-    to {
-        background-position: -1600px
-    }
-}*/
 
 .features__item--question .features__item-image {
   background-image: url('../images/sprite-animation-icon-1.png');

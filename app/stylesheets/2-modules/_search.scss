@@ -14,11 +14,10 @@
 form.search-bar {
   $medium-screen: em(767) !default;
   $large-screen: em(768) !default;
-  ///////////////////////////////////////////////////////////////////////////////////
+  
   $base-spacing: 1.5em !default;
   $base-border-color: gainsboro !default;
   $base-line-height: 1.5em !default;
-  //////////////////////////////////////////////////////////////////////////////////
 
   $search-bar-border-color: $base-border-color;
   $search-bar-border: 1px solid $search-bar-border-color;

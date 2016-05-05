@@ -1,6 +1,4 @@
 /* One level of nesting -- don't overdo it! */
-
-
 .navigation--main {
   $medium-screen: em(768) !default;
   @include outer-container;
